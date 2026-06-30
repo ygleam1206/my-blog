@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
+title: Grace's Blog
+subtitle: '开源实践与学习记录'
+description: '记录学习过程和项目实践'
 keywords:
-author: John Doe
+author: Grace
 language: en
 timezone: ''
 
