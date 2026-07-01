@@ -1,7 +1,7 @@
 ---
-title: 开源项目分析
+title: 开源项目分析（一）
 date: 2026-06-29
-categories: open-source-project-analysis
+categories: 开源项目分析
 
 tags: 开源软件项目
 ---
