@@ -1,170 +1,317 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Grace's Blog - 开源实践与学习记录</title><meta name="author" content="Grace"><meta name="copyright" content="Grace"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="记录学习过程和项目实践">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Grace&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="记录学习过程和项目实践">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Grace&#39;s Blog">
 <meta property="og:url" content="https://ygleam1206.github.io/index.html">
 <meta property="og:site_name" content="Grace&#39;s Blog">
 <meta property="og:description" content="记录学习过程和项目实践">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://ygleam1206.github.io/img/butterfly-icon.png">
 <meta property="article:author" content="Grace">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://ygleam1206.github.io/img/butterfly-icon.png"><script type="application/ld+json"></script><link rel="shortcut icon" href="/my-blog/img/favicon.png"><link rel="canonical" href="https://ygleam1206.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/my-blog/css/index.css?v=5.5.5"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"><script>
-    (() => {
-      
-    const saveToLocal = {
-      set: (key, value, ttl) => {
-        if (!ttl) return
-        const expiry = Date.now() + ttl * 86400000
-        localStorage.setItem(key, JSON.stringify({ value, expiry }))
-      },
-      get: key => {
-        const itemStr = localStorage.getItem(key)
-        if (!itemStr) return undefined
-        const { value, expiry } = JSON.parse(itemStr)
-        if (Date.now() > expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return value
-      }
-    }
-
-    window.btf = {
-      saveToLocal,
-      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
-        const script = document.createElement('script')
-        script.src = url
-        script.async = true
-        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
-        script.onload = script.onreadystatechange = () => {
-          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
-        }
-        script.onerror = reject
-        document.head.appendChild(script)
-      }),
-      getCSS: (url, id) => new Promise((resolve, reject) => {
-        const link = document.createElement('link')
-        link.rel = 'stylesheet'
-        link.href = url
-        if (id) link.id = id
-        link.onload = link.onreadystatechange = () => {
-          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
-        }
-        link.onerror = reject
-        document.head.appendChild(link)
-      }),
-      addGlobalFn: (key, fn, name = false, parent = window) => {
-        if (!false && key.startsWith('pjax')) return
-        const globalFn = parent.globalFn || {}
-        globalFn[key] = globalFn[key] || {}
-        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
-        parent.globalFn = globalFn
-      }
-    }
   
-      
-      const activateDarkMode = () => {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      const activateLightMode = () => {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
-        }
-      }
-
-      btf.activateDarkMode = activateDarkMode
-      btf.activateLightMode = activateLightMode
-
-      const theme = saveToLocal.get('theme')
-    
-          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
-        
-      
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
-      }
-    
-      
-    const detectApple = () => {
-      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
+    <link rel="alternate" href="/my-blog/atom.xml" title="Grace's Blog" type="application/atom+xml">
   
-    })()
-  </script><script>const GLOBAL_CONFIG = {
-  root: '/my-blog/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
-  copy: {
-    success: 'Copy Successful',
-    error: 'Copy Failed',
-    noSupport: 'Browser Not Supported'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  dateSuffix: {
-    just: 'Just now',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'null',
-  Snackbar: undefined,
-  infinitegrid: {
-    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
-    buttonText: 'Load More'
-  },
-  isPhotoFigcaption: false,
-  islazyloadPlugin: false,
-  isAnchor: false,
-  percent: {
-    toc: true,
-    rightside: false,
-  },
-  autoDarkmode: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'Grace\'s Blog',
-  isHighlightShrink: false,
-  isToc: false,
-  pageType: 'home'
-}</script><meta name="generator" content="Hexo 7.3.0"></head><body><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/my-blog/"><span class="site-name">Grace's Blog</span></a></span><div id="menus"></div></nav><div id="site-info"><h1 id="site-title">Grace's Blog</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts nc" id="recent-posts"><div class="recent-post-items"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/my-blog/2026/06/29/OSProjAnalysis/" title="开源项目分析">开源项目分析</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-06-28T16:00:00.000Z" title="Created 2026-06-29 00:00:00">2026-06-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/my-blog/categories/open-source-project-analysis/">open-source-project-analysis</a></span></div><div class="content">#Test今天我学习了：  开源项目分析 开源项目贡献 开源项目维护  我的理解：  开源项目分析：了解开源项目的基本信息，如项目名称、项目描述、项目地址、项目许可证、项目贡献者、项目维护者、项目版本、项目发布时间等。 开源项目贡献：了解开源项目的贡献方式，如提交代码、提交文档、提交问题、提交建议等。 开源项目维护：了解开源项目的维护方式，如修复问题、更新文档、发布新版本等。  </div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/my-blog/2026/06/29/about-me/" title="我的个人博客">我的个人博客</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2026-06-28T16:00:00.000Z" title="Created 2026-06-29 00:00:00">2026-06-29</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/my-blog/categories/introduction/">introduction</a></span></div><div class="content">关于我你好！欢迎来到我的博客～ 我是计算机专业在读学生， 目前正在学习：  Java 数据结构 Git 和 GitHub 开源项目分析   为什么搭建这个博客这是我第一次尝试部署个人博客。 希望通过博客：  记录学习过程 输出知识总结 记录项目实践   今日实践记录今天完成：  安装 Node.js 安装 Hexo 创建博客项目 本地运行博客  第一次尝试Hexo 自动生成网页。  后续持续更新～ ##更新 第一次博客部署已完成，修复了一些问题 </div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/my-blog/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/my-blog/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Grace</div><div class="author-info-description">记录学习过程和项目实践</div><div class="site-data"><a href="/my-blog/archives/"><div class="headline">Articles</div><div class="length-num">2</div></a><a href="/my-blog/tags/"><div class="headline">Tags</div><div class="length-num">3</div></a><a href="/my-blog/categories/"><div class="headline">Categories</div><div class="length-num">2</div></a></div><a id="card-info-btn"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Posts</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/my-blog/2026/06/29/OSProjAnalysis/" title="开源项目分析">开源项目分析</a><time datetime="2026-06-28T16:00:00.000Z" title="Created 2026-06-29 00:00:00">2026-06-29</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/my-blog/2026/06/29/about-me/" title="我的个人博客">我的个人博客</a><time datetime="2026-06-28T16:00:00.000Z" title="Created 2026-06-29 00:00:00">2026-06-29</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
-            <i class="fas fa-folder-open"></i>
-            <span>Categories</span>
-            
-          </div>
-          <ul class="card-category-list" id="aside-cat-list">
-            <li class="card-category-list-item "><a class="card-category-list-link" href="/my-blog/categories/introduction/"><span class="card-category-list-name">introduction</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/my-blog/categories/open-source-project-analysis/"><span class="card-category-list-name">open-source-project-analysis</span><span class="card-category-list-count">1</span></a></li>
-          </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>Tags</span></div><div class="card-tag-cloud"><a href="/my-blog/tags/%E7%AC%AC%E4%B8%80%E7%AF%87blog/" style="font-size: 1.1em; color: #999">第一篇blog</a> <a href="/my-blog/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE/" style="font-size: 1.1em; color: #999">开源软件项目</a> <a href="/my-blog/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 1.1em; color: #999">自我介绍</a></div></div><div class="card-widget card-archives">
-    <div class="item-headline">
-      <i class="fas fa-archive"></i>
-      <span>Archives</span>
+  
+    <link rel="shortcut icon" href="/my-blog/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/my-blog/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/my-blog/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/my-blog/" id="logo">Grace&#39;s Blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/my-blog/" id="subtitle">开源实践与学习记录</a>
+        </h2>
       
     </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/my-blog/">Home</a>
+        
+          <a class="main-nav-link" href="/my-blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/my-blog/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://ygleam1206.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
   
-    <ul class="card-archive-list">
+    <article id="post-OSProjAnalysis" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/my-blog/2026/06/29/OSProjAnalysis/" class="article-date">
+  <time class="dt-published" datetime="2026-06-28T16:00:00.000Z" itemprop="datePublished">2026-06-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/my-blog/categories/open-source-project-analysis/">open-source-project-analysis</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/my-blog/2026/06/29/OSProjAnalysis/">开源项目分析</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
       
-        <li class="card-archive-list-item">
-          <a class="card-archive-list-link" href="/my-blog/archives/2026/06/">
-            <span class="card-archive-list-date">
-              June 2026
-            </span>
-            <span class="card-archive-list-count">2</span>
-          </a>
-        </li>
+        <p>#Test<br>今天我学习了：</p>
+<ul>
+<li>开源项目分析</li>
+<li>开源项目贡献</li>
+<li>开源项目维护</li>
+</ul>
+<p>我的理解：</p>
+<ul>
+<li>开源项目分析：了解开源项目的基本信息，如项目名称、项目描述、项目地址、项目许可证、项目贡献者、项目维护者、项目版本、项目发布时间等。</li>
+<li>开源项目贡献：了解开源项目的贡献方式，如提交代码、提交文档、提交问题、提交建议等。</li>
+<li>开源项目维护：了解开源项目的维护方式，如修复问题、更新文档、发布新版本等。</li>
+</ul>
+
       
-    </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Website Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article Count :</div><div class="item-count">2</div></div><div class="webinfo-item"><div class="item-name">Unique Visitors :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Page Views :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-07-01T03:13:02.529Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Grace</span><span class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.5</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light and Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle Between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Settings"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back to Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/my-blog/js/utils.js?v=5.5.5"></script><script src="/my-blog/js/main.js?v=5.5.5"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ygleam1206.github.io/2026/06/29/OSProjAnalysis/" data-id="cmr1iddtq0000ljsqd1xy5ok7" data-title="开源项目分析" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/my-blog/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE/" rel="tag">开源软件项目</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-about-me" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/my-blog/2026/06/29/about-me/" class="article-date">
+  <time class="dt-published" datetime="2026-06-28T16:00:00.000Z" itemprop="datePublished">2026-06-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/my-blog/categories/introduction/">introduction</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/my-blog/2026/06/29/about-me/">我的个人博客</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h1><p>你好！欢迎来到我的博客～</p>
+<p>我是计算机专业在读学生，</p>
+<p>目前正在学习：</p>
+<ul>
+<li>Java</li>
+<li>数据结构</li>
+<li>Git 和 GitHub</li>
+<li>开源项目分析</li>
+</ul>
+<hr>
+<h1 id="为什么搭建这个博客"><a href="#为什么搭建这个博客" class="headerlink" title="为什么搭建这个博客"></a>为什么搭建这个博客</h1><p>这是我第一次尝试部署个人博客。</p>
+<p>希望通过博客：</p>
+<ul>
+<li>记录学习过程</li>
+<li>输出知识总结</li>
+<li>记录项目实践</li>
+</ul>
+<hr>
+<h1 id="今日实践记录"><a href="#今日实践记录" class="headerlink" title="今日实践记录"></a>今日实践记录</h1><p>今天完成：</p>
+<ul>
+<li>安装 Node.js</li>
+<li>安装 Hexo</li>
+<li>创建博客项目</li>
+<li>本地运行博客</li>
+</ul>
+<p>第一次尝试Hexo 自动生成网页。</p>
+<hr>
+<p>后续持续更新～</p>
+<p>##更新</p>
+<p>第一次博客部署已完成，修复了一些问题</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ygleam1206.github.io/2026/06/29/about-me/" data-id="cmr1iddts0001ljsqcse9avpi" data-title="我的个人博客" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/my-blog/tags/%E7%AC%AC%E4%B8%80%E7%AF%87blog/" rel="tag">第一篇blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/my-blog/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" rel="tag">自我介绍</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/my-blog/categories/introduction/">introduction</a></li><li class="category-list-item"><a class="category-list-link" href="/my-blog/categories/open-source-project-analysis/">open-source-project-analysis</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/my-blog/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE/" rel="tag">开源软件项目</a></li><li class="tag-list-item"><a class="tag-list-link" href="/my-blog/tags/%E7%AC%AC%E4%B8%80%E7%AF%87blog/" rel="tag">第一篇blog</a></li><li class="tag-list-item"><a class="tag-list-link" href="/my-blog/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" rel="tag">自我介绍</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/my-blog/tags/%E5%BC%80%E6%BA%90%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE/" style="font-size: 10px;">开源软件项目</a> <a href="/my-blog/tags/%E7%AC%AC%E4%B8%80%E7%AF%87blog/" style="font-size: 10px;">第一篇blog</a> <a href="/my-blog/tags/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/" style="font-size: 10px;">自我介绍</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/my-blog/archives/2026/06/">June 2026</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/my-blog/2026/06/29/OSProjAnalysis/">开源项目分析</a>
+          </li>
+        
+          <li>
+            <a href="/my-blog/2026/06/29/about-me/">我的个人博客</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2026 Grace<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/my-blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/my-blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/my-blog/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/my-blog/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/my-blog/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
